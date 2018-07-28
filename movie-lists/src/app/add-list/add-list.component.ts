@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-list.component.css']
 })
 export class AddListComponent implements OnInit {
-
+  create = false;
   constructor() { }
 
   ngOnInit() {
+  }
+  onCreate() {
+    this.create = true;
   }
 
 }

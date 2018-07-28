@@ -1,3 +1,3 @@
-<button (click) = "onSelect()" >
+<button *ngIf = "!this.create" (click) = "onCreate()" >
   Add a new Movies to watch list
 </button>
