@@ -1,6 +1,10 @@
 export class Movielists {
-    id: number;
-    name: String;
-    genre: String;
-    movie: String;
+    constructor(
+        public id: number,
+        public name: string,
+        public genre: string,
+        public movie: string
+    ) {
+
+    }
 }
