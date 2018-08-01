@@ -1,0 +1,18 @@
+<div class="col-md-6">
+  <h2 class="text-center">Add User</h2>
+  <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">List Name:</label>
+      <input formControlName="name" placeholder="List Name" name="list" class="form-control" id="list">
+    </div>
+    <div class="form-group">
+      <label for="movie">Genre:</label>
+      <input formControlName="genre" placeholder="Genre" name="genre" class="form-control" id = "genre">
+    </div>
+    <div class="form-group">
+      <label for="movie">Movie:</label>
+      <input formControlName="movie" placeholder="Movie" name="movie" class="form-control" id = "movie">
+    </div>
+    <button class="btn btn-success">Update</button>
+  </form>
+</div>
