@@ -1,2 +1,5 @@
 /node_modules
-
+*.json
+*.lock
+/backend/vendor
+*.yaml
