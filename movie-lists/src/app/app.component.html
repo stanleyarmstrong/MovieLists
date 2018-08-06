@@ -9,12 +9,22 @@
       <li *ngFor="let movieList of movieLists">
         <div class="view">
           <h1>{{movieList.title}}</h1>
-          <button class="destroy" (click)="removeMovieList(movieList)"></button>
+          <ul class= 'movies' *ngIf = 'movieList.movies.length > 0'>
+            <li *ngFor= 'let movie of movieList.movies'>
+              <p>
+                {{movie.name}}
+              </p>
+              <input class= "toggle" type = "checkbox" (click) ="toggleWatched(movieList)" [checked]="movie.watched">
+              <button class= "destroy" (click)="removeMovie(movieList, movie)">Delete</button> 
+            </li>
+          </ul>
+          <input class='new-movie' placeholder="Add a movie" autofocus="" [(ngModel)]= "newMovie.name" (keyup.enter)= "addMovie(movieList)">
+          <button class="destroy" (click)="removeMovieList(movieList)">Delete</button>
         </div>
       </li>
     </ul>
   </section>
   <footer class="footer" *ngIf="movieLists.length > 0">
-    <span class="movieLists-count"><strong>{{movieLists.length}}</strong> {{movieLists.length == 1 ? 'item' : 'items'}} Created</span>
+    <span class="movieLists-count"><strong>{{movieLists.length}}</strong> {{movieLists.length == 1 ? 'list' : 'lists'}} Created</span>
   </footer>
 </section>
