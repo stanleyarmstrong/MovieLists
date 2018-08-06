@@ -1,7 +1,20 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    {{ title }}
-  </h1>
-</div>
-<router-outlet></router-outlet> 
+<section class="movieListsapp">
+  <header class="header">
+    <h1>MovieLists</h1>
+    <input class="new-movieList" placeholder="Make a new movie list" autofocus="" [(ngModel)]="newMovieList.title" (keyup.enter)="addMovieList()">
+  </header>
+  <section class="main" *ngIf="movieLists.length > 0">
+    <ul class="movie-list">
+      <li *ngFor="let movieList of movieLists">
+        <div class="view">
+          <h1>{{movieList.title}}</h1>
+          <button class="destroy" (click)="removeMovieList(movieList)"></button>
+        </div>
+      </li>
+    </ul>
+  </section>
+  <footer class="footer" *ngIf="movieLists.length > 0">
+    <span class="movieLists-count"><strong>{{movieLists.length}}</strong> {{movieLists.length == 1 ? 'item' : 'items'}} Created</span>
+  </footer>
+</section>
