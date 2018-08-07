@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import { MovieListDataService } from './movie-list-data.service';
 import { MovieList } from './movie-list';
 import { Movies } from './movies';
@@ -9,6 +10,7 @@ import { Movies } from './movies';
   providers: [MovieListDataService],
 })
 export class AppComponent {
+  autocomplete: FormControl = new FormControl();
   newMovieList: MovieList = new MovieList();
   newMovie: Movies = new Movies();
   constructor(private movieListDataService: MovieListDataService) {}

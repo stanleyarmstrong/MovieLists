@@ -1,0 +1,15 @@
+.movieListsapp {
+    text-align: center;
+    color: white;
+}
+.movie-list {
+    list-style-type: none;
+}
+.movies {
+    list-style-type: none;
+}
+.destroy {
+    border-color: yellow;
+    background-color: red;
+    color: yellow;
+}
