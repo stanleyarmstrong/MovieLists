@@ -6,13 +6,12 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatAutocompleteModule } from '@angular/material/autocomplete';
-import { MovieListHeaderComponent } from './movie-list-header/movie-list-header.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    MovieListHeaderComponent
   ],
   imports: [
     BrowserModule,
